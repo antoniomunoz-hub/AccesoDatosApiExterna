@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<h1>Conversor Monedas</h1>
+<div class="example-wrapper">
+    <select name="origen" id="origen">
+        <option value="" >Selecione Moneda Origen</option>
+    </select>
+
+    <select name="destino" id="destino">
+        <option value="">Selecione Moneda Destino</option>
+    </select>
+    <div>
+    <label for="start">Fecha:</label>
+
+    <input type="date" id="start" name="trip-start"
+       value=""
+       min="" max=""><br>
+
+</div>
+
+<div>
+    <label for="importe">Importe:</label>
+    <input type="number" name="importe" id="importe" onchange="calcularImporte()"><br>
+
+    <label for="conversion">Conversion:</label>
+    <input type="number" name="conversion" id="conversion"><br>
+</div>
+
+    
+    
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/main.js"></script>
+{% endblock %}
